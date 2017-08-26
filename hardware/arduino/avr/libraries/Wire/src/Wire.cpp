@@ -80,6 +80,10 @@ void TwoWire::end(void)
   twi_disable();
 }
 
+uint32_t TwoWire::getClock(){
+  return  twi_getFrequency();
+}
+
 void TwoWire::setClock(uint32_t clock)
 {
   twi_setFrequency(clock);
